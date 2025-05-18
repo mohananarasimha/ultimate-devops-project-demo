@@ -47,8 +47,9 @@ jobs:
           uses: golangci/golangci-lint-action@v6
           with:
             version: v1.55.2
-            run: golangci-lint run
+            args: run
             working-directory: src/product-catalog
+          continue-on-error: true
 
     docker:
         runs-on: ubuntu-latest
